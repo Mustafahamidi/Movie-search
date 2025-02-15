@@ -13,10 +13,11 @@ searchButton.addEventListener("click", function () {
       if (data.Search) {
         render(data.Search);
       } else {
-        movieSection.innerHTML = "<p>No movies found.</p>";
+        movieSection.innerHTML = `<p class="text">No movies found.</p>`;
       }
     })
     .catch((error) => console.error("Error fetching data:", error));
+    searchInput.value = ""
 });
 
 function render(movies) {
